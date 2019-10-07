@@ -1,9 +1,9 @@
 import React from 'react'
 import { Route, Link } from 'react-router-dom'
-import logo from './logo.svg'
 import './App.css'
 import Home from './Home'
 import About from './About'
+import Profiles from './Profiles'
 
 function App() {
   return (
@@ -15,9 +15,13 @@ function App() {
         <li>
           <Link to="/about">소개</Link>
         </li>
+        <li>
+          <Link to="/profiles">프로필</Link>
+        </li>
       </ul>
       <Route path="/" component={Home} exact={true}></Route>
-      <Route path={["/about", "/info"]}component={About}></Route>
+      <Route path={['/about', '/info']} component={About}></Route>
+      <Route path="/profiles" component={Profiles}></Route>
     </div>
   )
 }
